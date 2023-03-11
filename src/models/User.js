@@ -2,11 +2,6 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection');
 
 const User = sequelize.define('user', {
-  campo1: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true
-  },
   email: {
     type: DataTypes.STRING,
     allowNull: false
@@ -27,7 +22,7 @@ const User = sequelize.define('user', {
     type: DataTypes.TEXT,
     allowNull: false
   },
-  Image: {
+  image: {
     type: DataTypes.STRING,
     allowNull: false
   },
