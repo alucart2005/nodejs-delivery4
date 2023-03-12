@@ -3,7 +3,7 @@ Project created in Node.js using Sequelize, JWT, and Bcrypt.
 
 ## Description
 
-Wow, you're in for a treat! Our team has used some of the best and most advanced technologies to bring you a seamless and secure experience. We've utilized Postman, "Node.js", and "Sequelize" to build a platform that allows us to develop powerful server-side applications using JavaScript, and interact with relational databases like never before! Plus, we've implemented the highly secure "JWT" standard for creating access tokens in our web applications, ensuring your data is always safe. And finally, we've got your passwords covered too, with "Bcrypt" - a cutting-edge password hashing library that stores your passwords safely and securely. Get ready to experience technology at its finest with our amazing platform!
+Wow, let me tell you about the amazing technologies and platforms that we used for this project! We utilized Postman, a powerful tool that helped us test and develop our API quickly and efficiently. We also took advantage of Node.js, an incredible programming platform that allowed us to develop robust server-side applications using JavaScript. With Sequelize, an awesome ORM library for Node.js, we were able to easily interact with our relational databases. And let's not forget about JWT, a fantastic security standard for creating access tokens that we used in our web applications. To top it off, we also used Bcrypt, a top-of-the-line password hashing library that ensured our users' passwords were stored securely. Let's keep pushing the boundaries with these amazing technologies!
 
 ## Author ✍
 
