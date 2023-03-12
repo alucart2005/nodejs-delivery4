@@ -1,5 +1,5 @@
 # nodejs-delivery4
-Project created in Node.js using Sequelize, JWT, and Bcrypt.
+Project created in Nodejs using Postman, Sequelize, JWT, and Bcrypt.
 
 ## Description
 
