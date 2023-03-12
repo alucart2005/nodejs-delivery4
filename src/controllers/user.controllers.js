@@ -15,7 +15,7 @@ const create = catchError(async(req, res) => {
   const encripted = await bcrypt.hash(password, 10);
   const result = await User.create({email, password: encripted, firstName, lastName, country, image});
   const code = require('crypto').randomBytes(32).toString('hex');
-  const link = `${frontBaseUrl}/#/verify_email/${code}`;
+  const link = `${frontBaseUrl}/verify_email/${code}`;
   await sendEmail({
     to: email,
     subject: "Verify your email",
@@ -64,7 +64,7 @@ const verifyEmail = catchError(async(req, res) => {
   const { code } = req.params;
   const emailCode = await EmailCode.findOne({ where: { code } });
   if(!emailCode) return res.status(401).json({ message: "Invalid code" });
-  await User.update({ isVerify: true }, { where: { id: emailCode.userId } });
+  await User.update({ isVerified: true }, { where: { id: emailCode.userId } });
   await emailCode.destroy();
   return res.json(emailCode);  
 });
@@ -72,10 +72,9 @@ const verifyEmail = catchError(async(req, res) => {
 const login = catchError(async(req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ where: { email } });
-  if(!user || !user.isVerify) return res.status(401).json({ message: "Invalid email or password" });
-  // console.log(user);
-  // const isValid = await bcrypt.compare(password, user.password);
-  // if(!isValid) return res.status(401).json({ message: "Invalid email or password" });
+  if(!user || !user.isVerified) return res.status(401).json({ message: "Invalid email or password" });
+  const isValid = await bcrypt.compare( password, user.password );
+  if(!isValid) return res.status(401).json({ message: "Invalid email or password" });
   const token = jwt.sign(
     { user }, 
     process.env.TOKEN_SECRET, 
