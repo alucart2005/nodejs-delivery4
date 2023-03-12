@@ -28,7 +28,7 @@ I'm so excited to share with you the technologies and platforms I used in this p
 
 ## To install
 
-To get started with this project, simply run npm i or npm install in the folder containing the cloned repository to install all required node modules.
+To get started with this project, simply run npm i or npm install in the folder containing the cloned repository to install all required node modules and run de  [FrontEnd](https://github.com/alucart2005/front-delivery4) proyect.
 
 ## Hiring 
 If you want to hire me you can write to napoleonanaya@gmail.com
